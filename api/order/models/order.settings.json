@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "property": {
+      "model": "property",
+      "via": "orders"
+    },
+    "paymentMethod": {
+      "type": "string",
+      "required": true
+    },
+    "taxPrice": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "totalPrice": {
+      "type": "decimal",
+      "unique": false
+    },
+    "paymentResult": {
+      "type": "json"
+    },
+    "isPaid": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "paidAt": {
+      "type": "datetime"
+    },
+    "isDelivered": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "deliveredAt": {
+      "type": "datetime"
+    }
+  }
+}

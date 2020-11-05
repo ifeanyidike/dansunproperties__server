@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "name": "property",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "availability": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "location": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "sale",
+        "rent",
+        "sold"
+      ],
+      "default": "sale",
+      "required": true
+    },
+    "features": {
+      "type": "json",
+      "required": true
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "categories": {
+      "collection": "category",
+      "via": "properties"
+    },
+    "mainImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "map_location": {
+      "type": "string",
+      "required": true,
+      "default": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15763.193442783924!2d7.557224000000001!3d8.990693749999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1604157156843!5m2!1sen!2sng"
+    },
+    "orders": {
+      "via": "property",
+      "collection": "order"
+    }
+  }
+}
