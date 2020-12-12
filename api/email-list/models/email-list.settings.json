@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "email_lists",
+  "info": {
+    "name": "EmailList"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "phoneNo": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}
