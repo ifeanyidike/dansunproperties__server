@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/email-lists",
-      "handler": "email-list.find",
+      "path": "/emailists",
+      "handler": "emailist.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/email-lists/count",
-      "handler": "email-list.count",
+      "path": "/emailists/count",
+      "handler": "emailist.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/email-lists/:id",
-      "handler": "email-list.findOne",
+      "path": "/emailists/:id",
+      "handler": "emailist.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/email-lists",
-      "handler": "email-list.create",
+      "path": "/emailists",
+      "handler": "emailist.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/email-lists/:id",
-      "handler": "email-list.update",
+      "path": "/emailists/:id",
+      "handler": "emailist.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/email-lists/:id",
-      "handler": "email-list.delete",
+      "path": "/emailists/:id",
+      "handler": "emailist.delete",
       "config": {
         "policies": []
       }

@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "email_lists",
+  "collectionName": "emailists",
   "info": {
-    "name": "EmailList"
+    "name": "emailist"
   },
   "options": {
     "increments": true,
@@ -11,12 +11,10 @@
   },
   "attributes": {
     "email": {
-      "type": "email",
-      "unique": true
+      "type": "email"
     },
     "phoneNo": {
-      "type": "string",
-      "unique": true
+      "type": "string"
     }
   }
 }
