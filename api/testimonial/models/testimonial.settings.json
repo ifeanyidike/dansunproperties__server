@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "testimonials",
   "info": {
-    "name": "testimonial"
+    "name": "testimonial",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,6 +17,21 @@
     },
     "description": {
       "type": "text",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "caption": {
+      "type": "string",
       "required": true
     }
   }
